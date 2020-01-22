@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ClickCounter } from "./examples/components/counter/ClickCounter";
+import { ClickCounterV2 } from "./examples/components/counter/ClickCounterV2";
+import { ClickCounterV3 } from "./examples/components/counter/ClickCounterV3";
+import { ClickCounterV4 } from "./examples/components/counter/ClickCounterV4";
+import { ThemeProvider } from "./examples/components/theme/ThemeProvider";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ClickCounter initial={0}></ClickCounter>
+      <hr />
+      <ClickCounterV2 initial={0}></ClickCounterV2>
+      <hr />
+      <ClickCounterV3 initial={0}></ClickCounterV3>
+      <hr />
+      <ClickCounterV4 initial={0}></ClickCounterV4>
+      <hr />
+      <ThemeProvider></ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;
